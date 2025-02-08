@@ -19,6 +19,10 @@ const PORT = process.env.PORT || 3000;
 //     res.redirect(EAZZY_BUSINESS_DOWNLOAD_URL);
 // });
 
+app.get("/", (req,res) => {
+    res.send("Eazzy App")
+})
+
 app.get("/eazzy-app/download", (req, res) => {
     res.redirect("https://github.com/chauhan-nilesh/server/releases/download/v1.0.2/Eazzy.apk");
 });
