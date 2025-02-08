@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const REDIRECT_URL = "https://eazzy.store"
+const REDIRECT_URL = "https://linktr.ee/instantgyyan"
 
 // // Google Drive Direct Download Link (Replace FILE_ID)
 // const EAZZY_GOOGLE_DRIVE_FILE_ID = `1WG6BcYbVRb_B_BZw5tEZ-8AR1GbIY_6v`
