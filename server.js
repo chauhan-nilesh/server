@@ -20,7 +20,7 @@ const PORT = process.env.PORT || 3000;
 // });
 
 app.get("/", (req,res) => {
-    res.send("Eazzy App")
+    res.send("Eazzy App");
 })
 
 app.get("/eazzy-app/download", (req, res) => {
