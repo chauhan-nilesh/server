@@ -3,6 +3,8 @@ const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+const REDIRECT_URL = "https://eazzy.store"
+
 // // Google Drive Direct Download Link (Replace FILE_ID)
 // const EAZZY_GOOGLE_DRIVE_FILE_ID = `1WG6BcYbVRb_B_BZw5tEZ-8AR1GbIY_6v`
 // const EAZZY_BUSINESS_GOOGLE_DRIVE_FILE_ID = `1WBUyC3nmxI-AgpqfqmK51rApscOEcHMo`
@@ -24,11 +26,39 @@ app.get("/", (req,res) => {
 })
 
 app.get("/eazzy-app/download", (req, res) => {
-    res.redirect("https://github.com/chauhan-nilesh/server/releases/download/v1.0.2/Eazzy.apk");
+    // res.redirect("https://github.com/chauhan-nilesh/server/releases/download/v1.0.2/Eazzy.apk");
+    res.send(`
+        <html>
+            <head>
+                <meta http-equiv="refresh" content="3;url=${REDIRECT_URL}" />
+                <script>
+                    window.location.href = "https://github.com/chauhan-nilesh/server/releases/download/v1.0.2/Eazzy.apk";
+                    setTimeout(() => { window.location.href = "${REDIRECT_URL}"; }, 3000);
+                </script>
+            </head>
+            <body>
+                <p>Your download is starting... If not, <a href="https://github.com/chauhan-nilesh/server/releases/download/v1.0.2/Eazzy.apk">click here</a>.</p>
+            </body>
+        </html>
+    `);
 });
 
 app.get("/eazzy-business-app/download", (req, res) => {
-    res.redirect("https://github.com/chauhan-nilesh/server/releases/download/v1.0.1/Eazzy.Business.apk");
+    // res.redirect("https://github.com/chauhan-nilesh/server/releases/download/v1.0.1/Eazzy.Business.apk");
+    res.send(`
+        <html>
+            <head>
+                <meta http-equiv="refresh" content="3;url=${REDIRECT_URL}" />
+                <script>
+                    window.location.href = "https://github.com/chauhan-nilesh/server/releases/download/v1.0.1/Eazzy.Business.apk";
+                    setTimeout(() => { window.location.href = "${REDIRECT_URL}"; }, 3000);
+                </script>
+            </head>
+            <body>
+                <p>Your download is starting... If not, <a href="https://github.com/chauhan-nilesh/server/releases/download/v1.0.1/Eazzy.Business.apk">click here</a>.</p>
+            </body>
+        </html>
+    `);
 });
 
 app.listen(PORT, () => {
