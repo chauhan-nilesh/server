@@ -30,10 +30,9 @@ app.get("/eazzy-app/download", (req, res) => {
     res.send(`
         <html>
             <head>
-                <meta http-equiv="refresh" content="3;url=${REDIRECT_URL}" />
                 <script>
                     window.location.href = "https://github.com/chauhan-nilesh/server/releases/download/v1.0.2/Eazzy.apk";
-                    setTimeout(() => { window.location.href = "${REDIRECT_URL}"; }, 3000);
+                    setTimeout(() => { window.location.href = "${REDIRECT_URL}"; }, 5000);
                 </script>
             </head>
             <body>
@@ -48,10 +47,9 @@ app.get("/eazzy-business-app/download", (req, res) => {
     res.send(`
         <html>
             <head>
-                <meta http-equiv="refresh" content="3;url=${REDIRECT_URL}" />
                 <script>
                     window.location.href = "https://github.com/chauhan-nilesh/server/releases/download/v1.0.1/Eazzy.Business.apk";
-                    setTimeout(() => { window.location.href = "${REDIRECT_URL}"; }, 3000);
+                    setTimeout(() => { window.location.href = "${REDIRECT_URL}"; }, 5000);
                 </script>
             </head>
             <body>
